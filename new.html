@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset=”UTF-8”>
+        <title>나의 웹페이지</title>
+
+<style>
+    
+    h1{
+        background-color: aqua;
+        color: blanchedalmond;
+        display: inline-block;
+        padding: 5px;
+        font-size: 3rem;
+        margin: 100px;
+        transform: scale(1)
+    }
+h1:hover{
+    transform: scale(2);
+    transform-origin: left top;
+    transition: all 1s;
+
+}
+
+/* trans */
+
+a {
+    font-size: 4rem;
+    display: inline-block;
+    transition-o: ;
+
+}
+a:active {
+    transform: translate(20px, 30px);
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.memo {
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-delay: 1S;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+
+</style>
+    
+</head>
+<body>
+    <a href="http://www.w3.org"></a>
+    <p>안녕하세요. 웹프로그래밍 기초</p>
+    <h1>Transform test</h1>
+
+    <a href="#?">Click Here</a>
+
+    <div class="memo">Memo</div>
+</body>
+</html>
