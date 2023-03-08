@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html, body, #wrapper {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+        h1 {
+            margin: 0px;
+        }
+        #header {
+            width: 100%;
+            height: 25%;
+            background-color: aliceblue;
+        }
+        #content {
+            width: 100%;
+            height: 60%;
+            background-color: aqua;
+        }
+        #footer {
+            width: 100%;
+            height: 15%;
+            background-color: aquamarine;
+        }
+        .inner-section {
+            border: 3px solid pink;
+            padding: 10px;
+        }
+        .imgDiv {
+            display: flex;
+            align-items: center;
+        }
+        ul {
+            text-align: center;
+        }
+        .navBar li {
+            list-style-type: none;
+            display: inline;
+            letter-spacing: 5px;
+            margin: 0px 10px 0px 10px;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: purple;
+            text-decoration: underline;
+        }
+        .inner-content {
+            display: inline-block;
+            /* width: 33%; */
+            height: 100%;
+            background-color: beige;
+        }
+        #con1 {
+            width: 20%;
+        }
+        #con2 {
+            width: 59%;
+        }
+        #con3 {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="inner-section">
+                <div class="imgDiv">
+                    <img src="img/shoppingBag.jpg" width="100px" height="100px">
+                    <h1>Web Shopping</h1>
+                </div>
+
+                <ul class="navBar">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SHOPPING</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">MY ACCOUNT</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <div id="con1" class="inner-content"></div>
+            <div id="con2" class="inner-content"></div>
+            <div id="con3" class="inner-content"></div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+</body>
+</html>
