@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Hello World!</p>
+    <div></div>
+    <div id="div"></div>
+    <div class="class"></div>
+    <p class="ready"></p>
+    <span></span>
+
+    <script>
+        console.log(document.getElementById("demo"));
+        //document.getElementById("demo").innerHTML = "<span>Hello World</span>";
+        //document.getElementById("demo").innerText = "<span>Hello World</span>";
+        document.querySelector("div").innerHTML = "여기는 div태그정보";
+        //태그 정보
+        document.querySelector(".ready").innerHTML = "클래스 정보";
+        //(.이름) 클래스정보
+        document.querySelector("#demo").innerHTML = "Id 정보";
+        //(#이름) ID정보
+        //겟엘리먼트 보다 퀄리셀렉터가 더 편하다고 함
+        //"1111111111";
+    </script>
+</body>
+</html>
