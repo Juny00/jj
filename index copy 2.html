@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Hello World!</p>
+    <div>Develop</div>
+    <div id="div">shit</div>
+    <div class="class">damn</div>
+    <p class="ready"></p>
+    <span></span>
+
+    <script>
+        //const 변수= document.querySelector("#div"); //Assignment 어싸인한다 선언한다. 변수 variable
+        //const x= document.querySelector("#div");
+        // const divElement= document.querySelector("#div"); // 소문자로 시작 연결단어는 대문자로(ex 'd'iv'E'lement) CamelCase 낙타등처럼 올라와서 낙타등이라고함
+
+       // document.querySelector("#div").innerHTML="Dead" //여기는 div태그정보
+       // document.querySelector("#div").style.color="red" 
+       // document.querySelector("#div").style.backgroundColor="yellow" 
+        //document.querySelector("#div").style.fontSize="50px"
+        
+        // 변수.innerHTML="Dead" //여기는 div태그정보
+        // 변수.style.color="red" 
+        // 변수.style.backgroundColor="yellow" 
+        // 변수.style.fontSize="50px"
+
+        // x.innerHTML="Dead" //여기는 div태그정보
+        // x.style.color="red"          
+        // x.style.backgroundColor="yellow" 
+        // x.style.fontSize="50px"
+
+        //divElement.innerHTML="Dead" //여기는 div태그정보
+        //divElement.style.color="red" 
+        //divElement.style.backgroundColor="yellow" 
+        //divElement.style.fontSize="50px"
+
+        console.dir(divElement)
+        
+        //display, margin, padding, fontFamily, fontStyle, fontWeight 사용
+        // const  변수이용
+
+        const divElement= document.querySelector("#div");
+
+        divElement.innerHTML="willSee";
+        divElement.style.color="red";
+        divElement.style.fontSize="50px";
+        divElement.style.fontStyle="italic";
+        divElement.style.fontWeight="bold";
+        divElement.style.margin="50px";
+
+        const classElem = document.querySelector(".class");
+        
+        classElem.style.color = "rgb(20, 50, 60)";
+        classElem.style.margin = "30px 20px 20px 30px";
+        classElem.style.fontWeight = "bold";
+        classElem.style.fontStyle = "italic";
+        classElem.style.padding = "20px";
+
+
+        //dom 컨트롤언어
+        document.querySelector(".class").innerHTML  //여기는 class태그정보
+        document.getElementById("p").innerHTML   //여기는 p태그정보
+        document.getElementById("span").innerHTML   //여기는 span태그정보
+
+    
+    </script>
+
+</body>
+</html>
