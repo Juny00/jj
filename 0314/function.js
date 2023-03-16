@@ -1,4 +1,4 @@
-//함수의 기본형  void형
+//함수의 기본형 
 //함수의 선언
 const func1 = function() {
     console.log("hello");
