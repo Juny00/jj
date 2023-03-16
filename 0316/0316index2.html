@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>hello</h2>
+
+    <script>
+        //1단계 이벤트의 대상선언
+        const h2 = document.querySelector("h2");
+        //2단계 콜백함수 선언
+        const mouseEnter = function(e) {
+            h2.innerHTML = "Mouse Enter......";
+            h2.style.backgroundColor = "blue"
+            h2.style.color = "red"
+            h2.style.fontStyle = "bold"
+        };
+        const mouseLeave = function(e) { 
+            h2.innerHTML = "Mouse Leave......"; 
+            h2.style.backgroundColor = "purple"
+            h2.style.color = "white"
+            h2.style.fontStyle = "itelic"
+        };
+        //3대상에게 콜백함수와 원하는 이벤트 등록
+        //"mouseenter", "mouseleave" //h2 (대상).eventListener("")
+        h2.addEventListener("mouseenter", mouseEnter);
+        h2.addEventListener("mouseleave", mouseLeave);
+    </script>
+</body>
+</html>
