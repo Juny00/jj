@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" />
+    <script>
+        // 1단계 : 이벤트의 대상을 선언. 키다운 이벤트같은것
+        const inputTag = document.querySelector("#name");
+        // 2단계 : 콜백함수 선언 
+        const callback = function(e) { //이벤트의 파라미터로 e(vent
+            console.log(e.key);
+       };
+        // 3단계 : 대상에게 콜백함수와 원하는 이벤트를 등록함
+        inputTag.addEventListener("keydown", callback); //keydown 이벤트
+    </script>
+</body>
+</html>
