@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+  </head>
+  <body>
+    <input id="input" placeholder="과일이름을 입력해주세요" />
+    <button onclick="callback()">click</button>
+    <div></div>
+
+    <script>
+      const fruits = [];
+
+      const callback = function () {
+        const input = document.querySelector("#input");
+        fruits.push(input.value);
+        console.log(fruits);
+       // display(input.value) //disppaly 함수호출
+       const tag = document.querySelector("div");
+       display(input.value, tag);
+      // display(input.value)
+        input.value = "";
+        
+      };
+
+      const display = function (inputValue) {
+        //p태그를 만든다
+        const pTag = document.createElement("p");
+        //만든 태그정보에 inputValue를 쓴다
+        pTag.innerHTML = inputValue;
+        //div태그안에 p태그를 추가
+        document.querySelector("div").appendChild(pTag);
+        //꼭 div 가 아닌 주어진 태그에 줄수도있음
+
+        
+
+      }
+    </script>
+  </body>
+</html>
