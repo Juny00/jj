@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="name"></div>
+    <script>
+        //이름을 prompt로 받는다
+        //color를 prompt로 받는다
+        //이름을 div 태그안에 넣는데 innerHTML이용
+        //이름의 색을 color로 바꾼다 style.color 이용
+
+       const userName = prompt("이름을 입력해주세요 : ");
+       const color = prompt("put your color : ");
+        //입력란 받아야하는 태그를 넣는거 만드는거?
+        //document.querySelector("div").innerHTML="userName"
+        //document.querySelector("#name").innerHTML="userName"
+    //   const divElement = document.querySelector("#name")
+    //   divElement.innerHTML="userName"
+        //document.querySelector("div").style.color="blue"
+    //   divElement.style.color="red"
+
+
+        //함수(이름, 컬러)
+        //함수의 기능은 div태그안에 이름을 적고 글씨색을 color로 바꾼다
+    const func = function (x, y) {
+        const divElement = document.querySelector("#name");
+        divElement.innerHTML = x;
+        divElement.style.color = y;
+    };
+    func(userName, color);
+
+        
+    </script>
+    <!-- <script src="function.js"></script> -->
+</body>
+</html>
