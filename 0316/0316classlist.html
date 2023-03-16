@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myStyle {
+            background-color: coral;
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv"> 
+        <!-- div division 박스를 나누는거 div안에 p태그를 이용 글을 씀 -->
+    <!-- <div id="myDiv" class="myStyle"> -->
+        <p>Im Div</p>
+    </div>
+    <button id="btn1">클래스 추가</button>
+    <button id="btn2">클래스 삭제</button>
+    <button id="btn3">Toggle 토글</button>
+
+    <script>
+        const btn1 = document.querySelector("#btn1");
+        const 함수1 = function (e) {
+            const div = document.querySelector("#myDiv");
+            div.classList.add("myStyle");
+        };
+        btn1.addEventListener("click", 함수1);
+
+        const btn2 = document.querySelector("#btn2");
+        const 함수2 = function (e) {
+            const div = document.querySelector("#myDiv");
+            div.classList.remove("myStyle");
+        };
+        btn2.addEventListener("click", 함수2);
+
+        const btn3 = document.querySelector("#btn3");
+        const 함수3 = function (e) {
+            const div = document.querySelector("#myDiv");
+            div.classList.toggle("myStyle");
+        };
+        btn3.addEventListener("click", 함수3);
+    </script>
+</body>
+</html>
+</html>
