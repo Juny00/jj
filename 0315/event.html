@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="demo"/>
+    <button>click</button>
+    <!-- 함수이해하면됨 -->
+<!-- btn button> -->
+    <script>
+        const btn = document.querySelector("button");
+        // addEventListener 는 타겟 뒤에사용 (내가 듣고싶은 이벤트) (클릭 이벤트 발생시 호출됨)
+
+        const callback = function () {
+            console.log("click");
+        };
+        btn.addEventListener("click", callback)
+        // 이벤트 등록, 반드시 독립적으로 사용하지말고 타겟에 붙여서 사용
+    </script>
+</body>
+</html>
