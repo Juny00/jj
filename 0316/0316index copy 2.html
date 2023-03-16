@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="name" /> -->
+
+    <div id = "noContextMenu" style="background-color: #eee">
+        여기는 우클릭 금지
+    </div> 
+    <div>다른곳은 우클릭 가능</div>
+
+    <script>
+        // 1단계 : 이벤트의 대상을 선언. div를 통하니 div = 
+        const div = document.querySelector("#noContextMenu");
+        //const inputTag - document.querySelector("#name")
+        // 2단계 : 콜백함수 선언 
+        const callback = function(e) { //이벤트의 파라미터로 e(vent)
+           // console.log(e.);
+           // console.log(e);
+           e.preventDefault();
+           //e.preventDepfault 이벤트들을 디폴트로 막겠다 란것(동작입력에 따라 다름)
+       };
+        // 3단계 : 대상에게 콜백함수와 원하는 이벤트를 등록함
+        div.addEventListener("noContextMenu", callback); //마우스 우클릭 이벤트 contextmenu. div 타겟
+        //addEventListener에 콜백 함수가 되면 e를 펑션에
+    </script>
+</body>
+</html>
