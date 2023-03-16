@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>hello</h2>
+
+    <script>
+        //1단계 이벤트의 대상선언
+        //resize 이벤트는 대상이 window창임 //이벤트 대상 선언을 크게 할필요가 없음?
+        const h2 = document.querySelector("h2");
+        //2단계 콜백함수 선언
+        const resize = function(e) {
+            const h2 = document.querySelector("h2"); //document는 뭔가? 그냥 가져다 쓰는 글로벌 정의 변수?
+            //h2.innerHTML = "Just Resize";
+            h2.innerHTML = "Right Click 발생";
+            e.preventDefault();
+        };
+        //3대상에게 콜백함수와 원하는 이벤트 등록
+        //"resize" 브라우저 창 같은것 
+        //window는 브라우저가 로딩시 선언하는 글로벌 변수(선언 불필요)
+        //window.addEventListener("resize", resize);
+        window.addEventListener("contextmenu", rightClick);
+    </script>
+</body>
+</html>
