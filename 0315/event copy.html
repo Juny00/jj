@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="demo"/>
+    <button>click</button>
+    <!-- 함수이해하면됨 -->
+<!-- btn button> -->
+    <script>
+        const btn = document.querySelector("button");
+        // addEventListener 는 타겟 뒤에사용 (내가 듣고싶은 이벤트) (클릭 이벤트 발생시 호출됨)
+
+        const callback = function () {
+            console.log("click");
+        };
+
+        const input = document.querySelector("#demo");
+        const func1 = function (e) { //e 라는 암묵적 코드 이벤트 콜백 함수는  e함수가 암묵적 규칙
+            console.log("input keydown 이벤트");
+            console.log(e.code);
+            if (e.code === "Space") {
+                console.log("Space키가 눌림"); //특정한키 에만 반응하는 코드를 만들고 싶을때
+            }
+        };
+        btn.addEventListener("click", callback);
+        // 이벤트 등록, 반드시 독립적으로 사용하지말고 타겟에 붙여서 사용
+        input.addEventListener("click", func1);
+    </script>
+</body>
+</html>
