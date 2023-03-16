@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" placeholder="TODO List" />
+    <button onclick="callback()">click</button>
+    <div></div>
+    
+    <script>
+        const input = document.querySelector("input"); //인풋에서 도큐먼트.쿼리셀렉 생각나야함
+        const div = document.querySelector("div");
+        const callback = function() {  //태그정보만드는거
+            const pTag = document.createElement("p"); //<p></p>  //태그정보만드는거
+            pTag.innerHTML = input.value; //input의  todolist할일 정보를 value로 살림
+            console.log(pTag);
+            div.appendChild(pTag);
+            input.value = "";
+        };
+
+
+    </script>
+</body>
+</html>
