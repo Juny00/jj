@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" placeholder="TODO List" />
+    <button onclick="callback()">click</button>
+    <div></div>
+    
+    <script>
+        const todoList = [];
+        const input = document.querySelector("input"); //인풋에서 도큐먼트.쿼리셀렉 생각나야함
+        const div = document.querySelector("div");
+
+        const callback = function() {  //태그정보만드는거
+           // const pTag = document.createElement("p"); //<p></p>  //태그정보만드는거
+          //  pTag.innerHTML = input.value; //input의  todolist할일 정보를 value로 살림
+            todoList.push(input.value);
+            console.log(pTag);
+
+          //  div.appendChild(pTag);
+            input.value = "";
+            display(todoList, div); // 인수로 배열과 위치태그 요소를 사용
+        };
+
+        const display = function (todoList, div) {
+            //div 태그내에 있던 기존 todo들을 지운다
+            div.innerHTML = "";        
+            // 배열을 for문을 돌아야함 투두리스트 몇개건 피태그를 만들어서 투두리스트 i를 놓고 div를 그밑에
+            
+            
+            //todo 전체내용을 다시 써준다
+            for (let i=8; i < foodList.lenght; i++) {  //for의 문장 구성 i<배열의길이
+                const pTag = document.createElement("p");
+                pTag.innerHTML = todoList[i]; //배열의 맴버 ex todolist안에 있는거
+                div.appendChild(pTag);
+            }
+        };
+
+
+    </script>
+</body>
+</html>
